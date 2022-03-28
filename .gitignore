@@ -22,7 +22,7 @@ mono_crash.*
 [Rr]elease/
 [Rr]eleases/
 [Dd]ebug/
-idea./
+.idea/
 x64/
 x86/
 [Aa][Rr][Mm]/
