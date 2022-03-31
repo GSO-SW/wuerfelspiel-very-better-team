@@ -14,6 +14,31 @@ namespace Wuerfelspiel
             
         }
 
-    
-    }
+        public Wuerfel(int anzahlSeiten)
+        {
+            this.anzahlSeiten = anzahlSeiten;
+        }
+        public int AnzahlSeiten
+        {
+            get 
+            {
+                return anzahlSeiten;
+            }
+        }
+        public int LetztesErbenis
+        { 
+        get 
+            { 
+
+                return letztesErbenis;
+            }
+        }
+        public bool Gesichert
+        {
+            get 
+            {
+                return gesichert; 
+            }
+        }
+     }
 }

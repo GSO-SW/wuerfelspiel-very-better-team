@@ -18,6 +18,25 @@ namespace WuerfelspielTests
 
             //Assert.IsTrue(true);// is tatsächlich true :O
         }
+        [TestMethod]
+        public void WuerfelSeitenTest()
+        {
+            //arrange
+            int anzahlSeiten = 8;
+            //act
+            Wuerfel w = new Wuerfel(anzahlSeiten);
+            //assert
+            Assert.AreEqual(anzahlSeiten, w.AnzahlSeiten);
+        }
+        [TestMethod]
+        public void SicherungUmschaltenTests_wirdGesichert()
+        {
+            //arrange
 
+            //act
+
+            //assert
+
+        }
     }
 }
