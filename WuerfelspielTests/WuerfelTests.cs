@@ -8,10 +8,16 @@ namespace WuerfelspielTests
     public class WuerfelTests
     {
         [TestMethod]
-        public void DummyTest()
+        public void WuerfelTest()
         {
-            
-            Assert.IsTrue(true);// is tatsächlich true :O
+            //arrange
+
+            //act
+            Wuerfel w = new Wuerfel();
+            //assert
+
+            //Assert.IsTrue(true);// is tatsächlich true :O
         }
+
     }
 }
