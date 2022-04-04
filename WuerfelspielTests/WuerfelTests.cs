@@ -8,16 +8,15 @@ namespace WuerfelspielTests
     public class WuerfelTests
     {
         [TestMethod]
-        public void WuerfelTest()
+        public void Wuerfel_KannerstelltWerden()
         {
             //arrange
-
+            bool gesichert = true;
             //act
             Wuerfel w = new Wuerfel();
             //assert
-
-            //Assert.IsTrue(true);// is tatsächlich true :O
-        }
+            Assert.AreEqual(gesichert, w.Gesichert);
+                }
         [TestMethod]
         public void WuerfelSeitenTest()
         {

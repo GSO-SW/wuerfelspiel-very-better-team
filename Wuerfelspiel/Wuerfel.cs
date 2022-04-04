@@ -11,7 +11,9 @@ namespace Wuerfelspiel
 
         public Wuerfel()
         {
-            
+            this.anzahlSeiten = AnzahlSeiten;
+            this.letztesErbenis = LetztesErbenis;   
+            this.gesichert = true;
         }
 
         public Wuerfel(int anzahlSeiten)
