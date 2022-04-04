@@ -49,6 +49,7 @@ namespace WuerfelspielTests
             Assert.AreEqual(letztesErbenis, w.LetztesErbenis);
         }
         [TestMethod]
+        [ExpectedException(typeof (ArgumentOutOfRangeException))]
         public void Wuerfel_KeineNegativesErgebnis()
         {
             //arrange
