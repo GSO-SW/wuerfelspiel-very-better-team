@@ -34,11 +34,11 @@ namespace WuerfelspielTests
             Assert.AreEqual(letztesErbenis , w.LetztesErbenis);
         }
         [TestMethod]
-        [ExpectedException(typeof(ArgumentOutOfRangeException))]
-        public void Wuerfel_KeineNegativenSeitenbzwKleinerAls6()
+      
+        public void Wuerfel_SeitenKleinerAls6odergroeßerals20()
         {
             //arrange
-            int anzahlSeiten = -1;
+            int anzahlSeiten = 3;
             bool gesichert = true;
             int letztesErbenis = 1;
             //act
@@ -59,9 +59,21 @@ namespace WuerfelspielTests
             //act
             Wuerfel w = new Wuerfel(anzahlSeiten, letztesErbenis, gesichert);
             //assert
+
+        }
+        [TestMethod]
+        public void Wuerfel_keinErgebnisAußerhalbderSeitenzahl()
+        {
+            //arrange
+            int anzahlSeiten = 8;
+            bool gesichert = true;
+            int letztesErbenis = 9;
+            //act
+            Wuerfel w = new Wuerfel(anzahlSeiten, letztesErbenis, gesichert);
+            //assert
             Assert.AreEqual(anzahlSeiten, w.AnzahlSeiten);
             Assert.AreEqual(gesichert, w.Gesichert);
-            Assert.IsTrue(w.LetztesErbenis >0 && w.LetztesErbenis<anzahlSeiten);
+            Assert.IsTrue(w.LetztesErbenis > 0 && w.LetztesErbenis < anzahlSeiten);
         }
         [TestMethod]
         public void SicherungUmschaltenTests_wirdGesichert()
