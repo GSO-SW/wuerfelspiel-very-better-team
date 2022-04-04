@@ -38,13 +38,13 @@ namespace WuerfelspielTests
         public void Wuerfel_SeitenKleinerAls6odergroeßerals20()
         {
             //arrange
-            int anzahlSeiten = 3;
+            int anzahlSeiten = 6;
             bool gesichert = true;
             int letztesErbenis = 1;
             //act
             Wuerfel w = new Wuerfel(anzahlSeiten, letztesErbenis, gesichert);
             //assert
-            Assert.IsTrue(w.AnzahlSeiten >6 && w.AnzahlSeiten < 21);
+            Assert.IsTrue(w.AnzahlSeiten >5 && w.AnzahlSeiten < 21);
             Assert.AreEqual(gesichert, w.Gesichert);
             Assert.AreEqual(letztesErbenis, w.LetztesErbenis);
         }
@@ -67,7 +67,7 @@ namespace WuerfelspielTests
             //arrange
             int anzahlSeiten = 8;
             bool gesichert = true;
-            int letztesErbenis = 9;
+            int letztesErbenis = 7;
             //act
             Wuerfel w = new Wuerfel(anzahlSeiten, letztesErbenis, gesichert);
             //assert
