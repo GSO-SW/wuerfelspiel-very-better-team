@@ -7,18 +7,18 @@ namespace Wuerfelspiel
         private int anzahlSeiten;
         private int letztesErbenis;
         private bool gesichert;
-        Random rnd = new Random();
 
-        public Wuerfel()
+        public Wuerfel(int letztesErbenis, bool gesichert)
         {
-            this.anzahlSeiten = AnzahlSeiten;
-            this.letztesErbenis = LetztesErbenis;   
-            this.gesichert = true;
+            this.letztesErbenis = letztesErbenis;   
+            this.gesichert = gesichert;
         }
 
-        public Wuerfel(int anzahlSeiten)
+        public Wuerfel(int anzahlSeiten, int letztesErbenis, bool gesichert)
         {
             this.anzahlSeiten = anzahlSeiten;
+            this.letztesErbenis = letztesErbenis;
+            this.gesichert = gesichert;
         }
         public int AnzahlSeiten
         {
