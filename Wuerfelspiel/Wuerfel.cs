@@ -41,6 +41,15 @@ namespace Wuerfelspiel
             {
                 return gesichert; 
             }
+            set
+            {
+                this.gesichert = value;
+            }
+        }
+        public void SicherungUmschalten()
+        {
+            throw new NotImplementedException();
+
         }
      }
 }
