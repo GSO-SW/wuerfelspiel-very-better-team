@@ -7,6 +7,8 @@ namespace WuerfelspielTests
     [TestClass]
     public class WuerfelTests
     {
+        private const int REPEAT = 1000;
+        /*
         [TestMethod]
         public void Wuerfel_KannerstelltWerden()
         {
@@ -95,6 +97,52 @@ namespace WuerfelspielTests
             //assert
 
         }
+*/
 
+        [TestMethod]
+        public void Wuerfel_KannErstelltWerden()
+        {
+            Wuerfel w = new Wuerfel();
+
+            Assert.IsTrue(w.Gesichert == false && w.AnzahlSeiten==6 && w.LetztesErbenis==-1);
+        }
+        
+        [TestMethod]
+        public void Wuerfel_KannErstelltWerdenMitMehrSeiten()
+        {
+            int i = 12;
+            Wuerfel w = new Wuerfel(i);
+
+            Assert.IsTrue(w.Gesichert == false && w.AnzahlSeiten==i && w.LetztesErbenis==-1);
+        }
+        [TestMethod]
+        public void Wuerfel_KannWuerfeln()
+        {
+            Wuerfel w = new Wuerfel();
+
+            for (int i = 0; i < REPEAT; i++)
+            {
+                int result=w.Wuerfeln();
+
+                Assert.IsTrue(w.LetztesErbenis == result && w.LetztesErbenis >0 && w.LetztesErbenis <7);
+            }
+        }
+        [TestMethod]
+        public void Wuerfel_KannWuerfelnMitMehrSeiten()
+        {
+            for (int i = 2; i < 20; i++)
+            {
+                Wuerfel w = new Wuerfel(i);
+
+                for (int j = 0; j < REPEAT; j++)
+                {
+                    int result=w.Wuerfeln();
+
+                    Assert.IsTrue(w.LetztesErbenis == result && w.LetztesErbenis >0 && w.LetztesErbenis <i+1);
+                }
+                
+            }
+            
+        }
     }
 }
