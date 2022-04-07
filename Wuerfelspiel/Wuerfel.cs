@@ -8,47 +8,25 @@ namespace Wuerfelspiel
         private int letztesErbenis;
         private bool gesichert;
 
-        public Wuerfel(int letztesErbenis, bool gesichert)
+        public Wuerfel() : this(6)
         {
-            this.letztesErbenis = letztesErbenis;   
-            this.gesichert = gesichert;
+            
         }
 
-        public Wuerfel(int anzahlSeiten, int letztesErbenis, bool gesichert)
+        public Wuerfel(int anzahlSeiten)
         {
             this.anzahlSeiten = anzahlSeiten;
-            this.letztesErbenis = letztesErbenis;
-            this.gesichert = gesichert;
+            this.letztesErbenis = -1;
+            this.gesichert = false;
         }
-        public int AnzahlSeiten
-        {
-            get 
-            {
-                return anzahlSeiten;
-            }
-        }
-        public int LetztesErbenis
-        { 
-        get 
-            { 
 
-                return letztesErbenis;
-            }
-        }
-        public bool Gesichert
-        {
-            get 
-            {
-                return gesichert; 
-            }
-            set
-            {
-                this.gesichert = value;
-            }
-        }
+        public int AnzahlSeiten => anzahlSeiten;
+
+        public int LetztesErbenis => letztesErbenis;
+        public bool Gesichert => gesichert;
         public void SicherungUmschalten()
         {
-            throw new NotImplementedException();
+            gesichert = !gesichert;
 
         }
      }

@@ -14,7 +14,7 @@ namespace WuerfelspielTests
             bool gesichert = true;
             int letztesErbenis =1;
             //act
-            Wuerfel w = new Wuerfel(letztesErbenis, gesichert);
+            Wuerfel w = new Wuerfel();
             //assert
             Assert.AreEqual(gesichert, w.Gesichert);
             Assert.AreEqual(letztesErbenis, w.LetztesErbenis);
@@ -27,7 +27,7 @@ namespace WuerfelspielTests
             bool gesichert = true;
             int letztesErbenis = 1;
             //act
-            Wuerfel w = new Wuerfel(anzahlSeiten, letztesErbenis,gesichert);
+            Wuerfel w = new Wuerfel();
             //assert
             Assert.AreEqual(anzahlSeiten, w.AnzahlSeiten);
             Assert.AreEqual(gesichert , w.Gesichert);
@@ -42,7 +42,7 @@ namespace WuerfelspielTests
             bool gesichert = true;
             int letztesErbenis = 1;
             //act
-            Wuerfel w = new Wuerfel(anzahlSeiten, letztesErbenis, gesichert);
+            Wuerfel w = new Wuerfel();
             //assert
             Assert.IsTrue(w.AnzahlSeiten >5 && w.AnzahlSeiten < 21);
             Assert.AreEqual(gesichert, w.Gesichert);
@@ -57,7 +57,7 @@ namespace WuerfelspielTests
             bool gesichert = true;
             int letztesErbenis = -1;
             //act
-            Wuerfel w = new Wuerfel(anzahlSeiten, letztesErbenis, gesichert);
+            Wuerfel w = new Wuerfel();
             //assert
 
         }
@@ -69,7 +69,7 @@ namespace WuerfelspielTests
             bool gesichert = true;
             int letztesErbenis = 7;
             //act
-            Wuerfel w = new Wuerfel(anzahlSeiten, letztesErbenis, gesichert);
+            Wuerfel w = new Wuerfel();
             //assert
             Assert.AreEqual(anzahlSeiten, w.AnzahlSeiten);
             Assert.AreEqual(gesichert, w.Gesichert);
