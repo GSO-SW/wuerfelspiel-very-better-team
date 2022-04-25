@@ -12,8 +12,9 @@ namespace Wuerfelspiel
 {
     public partial class UcWuerfel : UserControl
     {
-        private Wuerfel Wuerfel;
+        private Wuerfel wuerfel;
         public int Wert => Wuerfel.LetztesErbenis;
+        public Wuerfel Wuerfel => wuerfel;
 
         public UcWuerfel():this(new(6))
         {
@@ -23,9 +24,10 @@ namespace Wuerfelspiel
         public UcWuerfel(Wuerfel wuerfel) 
         {
             InitializeComponent();
-            Wuerfel = wuerfel;
+            this.wuerfel = wuerfel;
             this.lblWürfelNr.Text = "Würfel mit 6S";
             this.tbxAugenAnzah.Text ="0";
+            this.btnGesichert.Text = "Sichern";
         }
 
         public int Werfen()
@@ -37,7 +39,16 @@ namespace Wuerfelspiel
 
         private void btnGesichert_Click(object sender, EventArgs e)
         {
+            wuerfel.SicherungUmschalten();
 
+            if (wuerfel.Gesichert)
+            {
+                this.btnGesichert.Text = "Gesichert";
+            }
+            else
+            {
+                this.btnGesichert.Text = "Sichern";
+            }
         }
     }
 }
