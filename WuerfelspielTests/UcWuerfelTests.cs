@@ -14,5 +14,15 @@ namespace WuerfelspielTests
             UcWuerfel wuerfel = new UcWuerfel();
             Assert.AreEqual(-1, wuerfel.Wert);
         }
+        
+        //testet die Methode Wuerfeln
+        
+        [TestMethod]
+        public void TestWuerfeln()
+        {
+            UcWuerfel wuerfel = new UcWuerfel();
+            wuerfel.Werfen();
+            Assert.IsTrue(wuerfel.Wert >= 1 && wuerfel.Wert <= 6);
+        }
     }
 }
