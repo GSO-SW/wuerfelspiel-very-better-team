@@ -24,10 +24,16 @@ namespace Wuerfelspiel
         {
             InitializeComponent();
             Wuerfel = wuerfel;
+            this.lblWürfelNr.Text = "Würfel mit 6S";
+            this.tbxAugenAnzah.Text ="0";
         }
 
-        private void Click() { }
-        private void DoubleClick() { }
+        public int Werfen()
+        {
+            Wuerfel.Wuerfeln();
+            this.tbxAugenAnzah.Text = Wuerfel.LetztesErbenis.ToString();
+            return Wuerfel.LetztesErbenis;
+        }
 
 
     }
