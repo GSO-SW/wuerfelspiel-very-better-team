@@ -13,7 +13,7 @@ namespace Wuerfelspiel
     public partial class UcWuerfel : UserControl
     {
         private Wuerfel Wuerfel;
-        private int Wert => Wuerfel.LetztesErbenis;
+        public int Wert => Wuerfel.LetztesErbenis;
 
         public UcWuerfel():this(new(6))
         {
