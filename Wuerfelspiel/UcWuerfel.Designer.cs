@@ -31,6 +31,7 @@ namespace Wuerfelspiel
         {
             this.lblWürfelNr = new System.Windows.Forms.Label();
             this.tbxAugenAnzah = new System.Windows.Forms.TextBox();
+            this.btnGesichert = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblWürfelNr
@@ -52,10 +53,21 @@ namespace Wuerfelspiel
             this.tbxAugenAnzah.Size = new System.Drawing.Size(100, 20);
             this.tbxAugenAnzah.TabIndex = 2;
             // 
+            // btnGesichert
+            // 
+            this.btnGesichert.Location = new System.Drawing.Point(37, 106);
+            this.btnGesichert.Name = "btnGesichert";
+            this.btnGesichert.Size = new System.Drawing.Size(75, 23);
+            this.btnGesichert.TabIndex = 3;
+            this.btnGesichert.Text = "Sichern?";
+            this.btnGesichert.UseVisualStyleBackColor = true;
+            this.btnGesichert.Click += new System.EventHandler(this.btnGesichert_Click);
+            // 
             // UcWuerfel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnGesichert);
             this.Controls.Add(this.tbxAugenAnzah);
             this.Controls.Add(this.lblWürfelNr);
             this.Name = "UcWuerfel";
@@ -68,5 +80,6 @@ namespace Wuerfelspiel
 
         private System.Windows.Forms.Label lblWürfelNr;
         private System.Windows.Forms.TextBox tbxAugenAnzah;
+        private System.Windows.Forms.Button btnGesichert;
     }
 }

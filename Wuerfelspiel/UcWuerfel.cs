@@ -35,7 +35,9 @@ namespace Wuerfelspiel
             return Wuerfel.LetztesErbenis;
         }
 
+        private void btnGesichert_Click(object sender, EventArgs e)
+        {
 
-
+        }
     }
 }
